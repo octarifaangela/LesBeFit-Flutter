@@ -7,6 +7,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade800,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -18,7 +19,7 @@ class FirstPage extends StatelessWidget {
                   fontSize: 20,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),),
             ),
             ElevatedButton.icon(onPressed: () {
@@ -27,7 +28,7 @@ class FirstPage extends StatelessWidget {
               icon: Icon(Icons.play_arrow),
               label: Text('Leggo!'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
+                backgroundColor: Colors.deepOrange,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)
                 ),

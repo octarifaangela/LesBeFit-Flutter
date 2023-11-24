@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:uassetl/workout/workout_tracker_view.dart';
 import 'database/database_instance.dart';
 import 'models/activity_model.dart';
 import 'screens/create_screen.dart';
@@ -79,7 +80,17 @@ class _CaloriesState extends State<Calories> {
               });
             },
           ),
-        Icon(Icons.fitness_center_rounded, color: Colors.white),
+      IconButton(
+        icon: Icon(Icons.fitness_center_rounded),
+        color: Colors.white,
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => WorkoutTrackerView()))
+              .then((value) {
+            setState(() {});
+          });
+        },
+      ),
         ],
       ),
       appBar: AppBar(
